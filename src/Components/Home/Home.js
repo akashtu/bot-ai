@@ -3,6 +3,7 @@ import "./Home.css";
 import Grid from "@mui/material/Grid";
 import ResponsiveDrawer from "../Side/Side";
 import Image from "../../Assets/image 29.png";
+import { Link } from "react-router-dom";
 export const Home = () => {
   return (
     <Grid container>
@@ -95,7 +96,9 @@ export const Home = () => {
                 }}
               >
                 <Grid item xs={6}>
-                  <input type="text" placeholder="Chat with AI" />
+                  <Link to="/chat">
+                    <input type="text" placeholder="Chat with AI" />
+                  </Link>
                 </Grid>
                 <Grid item xs={2} md={1}>
                   <button className="button1">Ask</button>

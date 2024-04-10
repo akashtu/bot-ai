@@ -4,3 +4,23 @@
   height: 806px;
   background-color: #fff;
 }
+
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+  top: auto !important;
+  /* position: relative; */
+  /* width: 100%; */
+  height: 47px !important;
+  background: linear-gradient(0deg, #d7c7f4, #d7c7f4),
+    linear-gradient(0deg, #d7c7f4, #d7c7f4),
+    linear-gradient(0deg, #d7c7f4, #d7c7f4),
+    linear-gradient(0deg, #d7c7f4, #d7c7f4) !important;
+  border: 1px solid red;
+}
+.conversation {
+  background-color: #d7c7f4 !important;
+  border: 1px solid red;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: nowrap;
+}

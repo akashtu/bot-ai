@@ -37,7 +37,12 @@ export const Home = () => {
               </div>
             </Grid>
           </Grid>
-          <Grid container spacing={2} className="box-container">
+          <Grid
+            container
+            spacing={2}
+            className="box-container"
+            style={{ padding: "20px", paddingBottom: "0px" }}
+          >
             {/* <div className="box-component"> */}
             <Grid item xs={12} md={6}>
               <div className="box">
@@ -93,10 +98,10 @@ export const Home = () => {
                   <input type="text" placeholder="Chat with AI" />
                 </Grid>
                 <Grid item xs={2} md={1}>
-                  <button>Ask</button>
+                  <button className="button1">Ask</button>
                 </Grid>
                 <Grid item xs={2} md={1}>
-                  <button>Save</button>
+                  <button className="button1">Save</button>
                 </Grid>
               </Grid>
             </Grid>

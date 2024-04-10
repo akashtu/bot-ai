@@ -2,20 +2,23 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
+// import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
+// import InboxIcon from "@mui/icons-material/MoveToInbox";
+// import List from "@mui/material/List";
+// import ListItem from "@mui/material/ListItem";
+// import ListItemButton from "@mui/material/ListItemButton";
+// import ListItemIcon from "@mui/material/ListItemIcon";
+// import ListItemText from "@mui/material/ListItemText";
+// import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
+// import { Grid } from "@mui/material";
+import Image from "../../Assets/Group 1000011095.png";
+import { FiEdit } from "react-icons/fi";
 
 const drawerWidth = 240;
 
@@ -39,37 +42,45 @@ function ResponsiveDrawer(props) {
     }
   };
 
-  //   const drawer = (
-  //     <div>
-  //       <Toolbar />
-  //       <Divider />
-  //       <List>
-  //         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-  //           <ListItem key={text} disablePadding>
-  //             <ListItemButton>
-  //               <ListItemIcon>
-  //                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-  //               </ListItemIcon>
-  //               <ListItemText primary={text} />
-  //             </ListItemButton>
-  //           </ListItem>
-  //         ))}
-  //       </List>
-  //       <Divider />
-  //       <List>
-  //         {["All mail", "Trash", "Spam"].map((text, index) => (
-  //           <ListItem key={text} disablePadding>
-  //             <ListItemButton>
-  //               <ListItemIcon>
-  //                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-  //               </ListItemIcon>
-  //               <ListItemText primary={text} />
-  //             </ListItemButton>
-  //           </ListItem>
-  //         ))}
-  //       </List>
-  //     </div>
-  //   );
+  const drawer = (
+    <div>
+      <Toolbar />
+      <Divider />
+      <div
+        className="conversation"
+        style={{
+          backgroundColor: "#D7C7F4",
+          display: "flex",
+          alignItems: "center",
+          gap: "20px",
+          padding: "10px",
+        }}
+      >
+        <img src={Image} alt="" className="image" />
+        <div style={{ fontSize: "20px", fontWeight: "400", color: "black" }}>
+          New Chat
+        </div>
+        <FiEdit style={{ cursor: "pointer" }} />
+      </div>
+      <Divider />
+      <button
+        style={{
+          width: "200px",
+          marginLeft: "18px",
+          marginTop: "20px",
+          backgroundColor: "#D7C7F4",
+          height: "39px",
+          borderRadius: "10px",
+          border: "none",
+          fontSize: "16px",
+          fontWeight: "700",
+          cursor: "pointer",
+        }}
+      >
+        Past Conversations
+      </button>
+    </div>
+  );
 
   // Remove this const when copying and pasting into your project.
   const container =
@@ -120,8 +131,12 @@ function ResponsiveDrawer(props) {
             },
           }}
         >
-          {/* {drawer} */}
-          <div>My name is Akash</div>
+          {drawer}
+          {/* <div>My name is Akash</div> */}
+          {/* <div>
+            <div className="first-div">Akash Yadav</div>
+            <div className="second-div"></div>
+          </div> */}
         </Drawer>
         <Drawer
           variant="permanent"
@@ -134,8 +149,8 @@ function ResponsiveDrawer(props) {
           }}
           open
         >
-          {/* {drawer} */}
-          <div>My name is Akash</div>
+          {drawer}
+          {/* <div>My name is Akash</div> */}
         </Drawer>
       </Box>
       {/* <Box

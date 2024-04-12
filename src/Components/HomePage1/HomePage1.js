@@ -21,6 +21,7 @@ export const HomePage1 = () => {
   const [feedvalue, setFeedValue] = useState("");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [starvisible, setStarVisible] = useState(null);
+  // const [newdata, setNewData] = useState([]);
 
   useEffect(() => {
     const localDataStorage = localStorage.getItem("history");
@@ -59,8 +60,11 @@ export const HomePage1 = () => {
   const submitFeedback = () => {
     if (currentQuestionIndex !== null) {
       const updatedDataStore = [...datastore];
+
       updatedDataStore[currentQuestionIndex].feedback = feedvalue;
+
       setDataStore(updatedDataStore);
+
       setFeedOpen(false);
       localStorage.setItem("history", JSON.stringify(updatedDataStore));
     }

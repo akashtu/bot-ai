@@ -302,4 +302,19 @@ export const data = [
     response:
       "Staying updated involves following industry news, participating in developer communities, attending conferences and workshops, taking online courses, reading technical blogs and publications, and experimenting with new technologies and tools.",
   },
+  {
+    id: 51,
+    question: "Hi",
+    response: "Hi There. How can I assist you today?",
+  },
+  {
+    id: 52,
+    question: "How are you today?",
+    response: "As an AI Language Model, I don't have the details",
+  },
+  {
+    id: 53,
+    question: "How are you?",
+    response: "I am fine. What about you?",
+  },
 ];

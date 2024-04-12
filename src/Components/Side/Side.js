@@ -19,6 +19,7 @@ import Toolbar from "@mui/material/Toolbar";
 // import { Grid } from "@mui/material";
 import Image from "../../Assets/Group 1000011095.png";
 import { FiEdit } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -60,25 +61,27 @@ function ResponsiveDrawer(props) {
         <div style={{ fontSize: "20px", fontWeight: "400", color: "black" }}>
           New Chat
         </div>
-        <FiEdit style={{ cursor: "pointer" }} />
+        <FiEdit style={{ cursor: "pointer" }} onClick={() => props.refresh()} />
       </div>
       <Divider />
-      <button
-        style={{
-          width: "200px",
-          marginLeft: "18px",
-          marginTop: "20px",
-          backgroundColor: "#D7C7F4",
-          height: "39px",
-          borderRadius: "10px",
-          border: "none",
-          fontSize: "16px",
-          fontWeight: "700",
-          cursor: "pointer",
-        }}
-      >
-        Past Conversations
-      </button>
+      <Link to="/convhistory">
+        <button
+          style={{
+            width: "200px",
+            marginLeft: "18px",
+            marginTop: "20px",
+            backgroundColor: "#D7C7F4",
+            height: "39px",
+            borderRadius: "10px",
+            border: "none",
+            fontSize: "16px",
+            fontWeight: "700",
+            cursor: "pointer",
+          }}
+        >
+          Past Conversations
+        </button>
+      </Link>
     </div>
   );
 
